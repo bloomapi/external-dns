@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/rancher/external-dns/dns"
+	"github.com/bloomapi/external-dns/dns"
 	"github.com/rancher/go-rancher/client"
 )
 

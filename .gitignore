@@ -2,3 +2,5 @@ external-dns
 build
 dist
 bin
+docker-compose.yml
+rancher-compose.yml

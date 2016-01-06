@@ -6,7 +6,7 @@ import (
 
 	"github.com/Sirupsen/logrus"
 	"github.com/crackcomm/cloudflare"
-	"github.com/rancher/external-dns/dns"
+	"github.com/bloomapi/external-dns/dns"
 	"golang.org/x/net/context"
 )
 

@@ -3,7 +3,7 @@ package providers
 import (
 	"fmt"
 	"github.com/Sirupsen/logrus"
-	"github.com/rancher/external-dns/dns"
+	"github.com/bloomapi/external-dns/dns"
 	"github.com/weppos/go-dnsimple/dnsimple"
 	"os"
 	"strings"

@@ -52,7 +52,7 @@ func ConvertToServiceDnsRecord(dnsRecord DnsRecord) ServiceDnsRecord {
 	return serviceRecord
 }
 
-func ConvertToFqdn(serviceName string, stackName string, environmentName string) string {
-	domainNameEntries := []string{serviceName, stackName, environmentName, RootDomainName}
+func ConvertToFqdn(containerName string, environmentName string) string {
+	domainNameEntries := []string{containerName, environmentName, RootDomainName}
 	return strings.ToLower(strings.Join(domainNameEntries, "."))
 }

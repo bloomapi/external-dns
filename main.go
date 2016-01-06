@@ -3,9 +3,9 @@ package main
 import (
 	"flag"
 	"github.com/Sirupsen/logrus"
-	"github.com/rancher/external-dns/dns"
-	"github.com/rancher/external-dns/metadata"
-	"github.com/rancher/external-dns/providers"
+	"github.com/bloomapi/external-dns/dns"
+	"github.com/bloomapi/external-dns/metadata"
+	"github.com/bloomapi/external-dns/providers"
 	"os"
 	"time"
 )

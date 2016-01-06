@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"github.com/Sirupsen/logrus"
 	"github.com/cognetoapps/go-pointdns"
-	"github.com/rancher/external-dns/dns"
+	"github.com/bloomapi/external-dns/dns"
 	"os"
 	"strings"
 )

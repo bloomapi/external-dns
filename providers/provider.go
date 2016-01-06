@@ -3,8 +3,8 @@ package providers
 import (
 	"fmt"
 	"github.com/Sirupsen/logrus"
-	"github.com/rancher/external-dns/dns"
-	"github.com/rancher/external-dns/metadata"
+	"github.com/bloomapi/external-dns/dns"
+	"github.com/bloomapi/external-dns/metadata"
 )
 
 type Provider interface {

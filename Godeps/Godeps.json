@@ -1,5 +1,5 @@
 {
-	"ImportPath": "github.com/rancher/external-dns",
+	"ImportPath": "github.com/bloomapi/external-dns",
 	"GoVersion": "go1.5.1",
 	"Deps": [
 		{

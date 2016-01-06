@@ -2,7 +2,7 @@ package metadata
 
 import (
 	"github.com/Sirupsen/logrus"
-	"github.com/rancher/external-dns/dns"
+	"github.com/bloomapi/external-dns/dns"
 	"github.com/rancher/go-rancher-metadata/metadata"
 )
 
@@ -64,23 +64,8 @@ func (m *MetadataClient) getContainersDnsRecords(dnsEntries map[string]dns.DnsRe
 			}
 		}
 
-		if len(container.Ports) == 0 {
-			continue
-		}
-
-		hostUUID := container.HostUUID
-		if len(hostUUID) == 0 {
-			logrus.Debugf("Container's %v host_uuid is empty", container.Name)
-			continue
-		}
-		host, err := m.MetadataClient.GetHost(hostUUID)
-		if err != nil {
-			logrus.Infof("%v", err)
-			continue
-		}
-		ip := host.AgentIP
-		fqdn := dns.ConvertToFqdn(container.ServiceName, container.StackName, m.EnvironmentName)
-		records := []string{ip}
+		fqdn := dns.ConvertToFqdn(container.Name, m.EnvironmentName)
+		records := []string{container.PrimaryIp}
 		dnsEntry := dns.DnsRecord{fqdn, records, "A", dns.TTL}
 
 		addToDnsEntries(dnsEntry, dnsEntries)
